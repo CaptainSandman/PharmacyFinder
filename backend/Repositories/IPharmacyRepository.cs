@@ -10,5 +10,7 @@ namespace PharmacyBackend.Repositories
         IEnumerable<Pharmacy> GetPharmacies();
 
         Pharmacy GetPharmacyByID(int id);
+
+        Pharmacy FetchNearestPharmacy(double latitude, double longitude);
     }
 }

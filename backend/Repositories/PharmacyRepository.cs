@@ -5,6 +5,7 @@ using System.Text;
 
 using TinyCsvParser;
 
+using PharmacyBackend;
 using PharmacyBackend.Models;
 
 namespace PharmacyBackend.Repositories
@@ -41,9 +42,13 @@ namespace PharmacyBackend.Repositories
 
         public Pharmacy GetPharmacyByID(int ID)
         {
-            var query = from Pharmacy p in pharmacies where p.ID == ID select p;
+            return (from Pharmacy p in pharmacies where p.ID == ID select p).First();
+        }
 
-            return query.First();
+        public Pharmacy FetchNearestPharmacy(double latitude, double longitude)
+        {
+            
+            return null;
         }
 
         private bool disposed = false;
