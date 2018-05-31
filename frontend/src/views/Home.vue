@@ -1,15 +1,18 @@
 <template>
   <div class="home">
     <b-container>
-      <div class="map-responsive">
-        <iframe width="600" height="450" frameborder="0" style="border:0" :src="'https://www.google.com/maps/embed/v1/place?key=' + gmapsKey + '&q=Student+Center,+12345+College+Blvd,+Overland+Park,+KS+66210'" ></iframe>
-      </div>
+      <GmapMap
+        :center="{lat:38.8814, lng: -94.8191}"
+        :zoom="9"
+        style="width: 640px; height: 480px">
+      </GmapMap>
     </b-container>
   </div>
 </template>
 
 <script>
 import Globals from '../globals'
+import axios from 'axios'
 
 export default {
   name: 'home',
@@ -19,14 +22,22 @@ export default {
     }
   },
   components: {
+  },
+  mounted() {
+
   }
 }
 </script>
 
 <style>
+.home {
+  padding-top: 25px;
+}
+
 .map-responsive {
   overflow: hidden;
   padding-bottom: 56.25%;
+  padding-right: 32.50%;
   position: relative;
   height: 0;
 }

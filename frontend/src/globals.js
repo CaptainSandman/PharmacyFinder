@@ -19,7 +19,7 @@ class Globals
   }
 
   static getCompleteGoogleAPIUrl() {
-    return this.getGoogleAPIUrl() + "?key=" + this.getGoogleKey();
+    return this.getGoogleAPIUrl() + "?key=" + this.getGoogleKey()
   }
 }
 

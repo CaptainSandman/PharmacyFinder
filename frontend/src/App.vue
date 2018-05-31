@@ -17,30 +17,8 @@
 </template>
 
 <script>
-import Globals from './globals'
-
 export default {
-  name: 'App',
-  data() {
-    return {
-      alreadyLoadedGmaps: false
-    }
-  },
-  mounted() {
-    if (!this.alreadyLoadedGmaps) {
-      console.log("PharmacyFinder\nCopyright (C) 2018 Josh Kennedy")
-
-      // Inject the Google Maps API so we don't expose the secret.
-      var s = document.createElement('script')
-
-      s.type = 'text/javascript'
-      s.src = Globals.getCompleteGoogleAPIUrl()
-
-      document.getElementsByTagName('head')[0].appendChild(s);
-
-      this.alreadyLoadedGmaps = true;
-    }
-  },
+  name: 'App'
 }
 </script>
 
