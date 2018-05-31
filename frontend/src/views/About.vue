@@ -1,5 +1,8 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <b-container>
+      <h1>About PharmacyFinder</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel omnis, voluptates facere expedita possimus asperiores laborum illo exercitationem cupiditate libero provident doloremque facilis vitae dignissimos quae sint hic ullam quo.</p>
+    </b-container>
   </div>
 </template>

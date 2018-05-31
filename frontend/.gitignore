@@ -2,6 +2,9 @@
 node_modules
 /dist
 
+# sshhh, it's a secret.
+/src/secret.js
+
 # local env files
 .env.local
 .env.*.local

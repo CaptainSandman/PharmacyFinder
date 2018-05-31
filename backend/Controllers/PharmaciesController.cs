@@ -19,18 +19,24 @@ namespace PharmacyBackend.Controllers
             this.myPharmaRepo = repository;
         }
 
-        // GET api/values
+        // GET api/pharmacies
         [HttpGet]
         public IEnumerable<Pharmacy> Get()
         {
             return this.myPharmaRepo.GetPharmacies();
         }
 
-        // GET api/values/5
+        // GET api/pharmacies/69
         [HttpGet("{id}")]
         public Pharmacy Get(int id)
         {
             return this.myPharmaRepo.GetPharmacyByID(id);
+        }
+
+        [HttpGet("/fetchNearest/{lat}/{long}")]
+        public Pharmacy FetchNearest(double latitude, double longitude)
+        {
+            return null;
         }
     }
 }
