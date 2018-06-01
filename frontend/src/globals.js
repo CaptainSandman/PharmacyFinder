@@ -3,10 +3,10 @@ import Secret from './secret'
 class Globals
 {
   static getBackendUrl() {
-    if (process.env.NODE_ENV !== 'production') {
-      return "http://api.pharmacy-finder.machonacho.io/api/"
+    if (process.env.NODE_ENV === 'production') {
+      return "http://api.pharmacy-finder.machonacho.io/api"
     } else {
-      return "http://localhost:5000/api/"
+      return "http://localhost:5000/api"
     }
   }
 

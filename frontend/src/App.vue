@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <b-navbar toggleable="md" type="dark" variant="primary">
+    <b-navbar toggleable="md" type="dark" variant="info">
       <b-navbar-brand to="/">Josh's PharmacyFinder</b-navbar-brand>
 
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
