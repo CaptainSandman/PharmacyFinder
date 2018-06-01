@@ -26,6 +26,7 @@ namespace PharmacyBackend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddCors();
             services.AddScoped<IPharmacyRepository, PharmacyRepository>();
         }
 
