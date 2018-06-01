@@ -33,10 +33,16 @@ namespace PharmacyBackend.Controllers
             return this.myPharmaRepo.GetPharmacyByID(id);
         }
 
-        [HttpGet("/fetchNearest/{lat}/{long}")]
-        public Pharmacy FetchNearest(double latitude, double longitude)
+        [HttpGet("fetchNearest/{latitude}/{longitude}")]
+        public KeyValuePair<Pharmacy, double> FetchNearest(double latitude, double longitude)
         {
-            return null;
+            return this.myPharmaRepo.FetchNearestPharmacy(latitude, longitude);
+        }
+
+        [HttpGet("fetchAllNearest/{latitude}/{longitude}")]
+        public IEnumerable<KeyValuePair<Pharmacy, double>> FetchAllNearest(double latitude, double longitude)
+        {
+            return this.myPharmaRepo.FetchNearestPharmacies(latitude, longitude);
         }
     }
 }

@@ -11,6 +11,8 @@ namespace PharmacyBackend.Repositories
 
         Pharmacy GetPharmacyByID(int id);
 
-        Pharmacy FetchNearestPharmacy(double latitude, double longitude);
+        IEnumerable<KeyValuePair<Pharmacy, double>> FetchNearestPharmacies(double latitude, double longitude);
+
+        KeyValuePair<Pharmacy, double> FetchNearestPharmacy(double latitude, double longitude);
     }
 }

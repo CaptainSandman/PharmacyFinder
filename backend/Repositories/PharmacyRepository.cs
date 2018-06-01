@@ -45,10 +45,24 @@ namespace PharmacyBackend.Repositories
             return (from Pharmacy p in pharmacies where p.ID == ID select p).First();
         }
 
-        public Pharmacy FetchNearestPharmacy(double latitude, double longitude)
+        public IEnumerable<KeyValuePair<Pharmacy, double>> FetchNearestPharmacies(double latitude, double longitude)
         {
-            
-            return null;
+            // Where key is the pharmacy id, and double is the distance
+            Dictionary<Pharmacy, double> nearestPharmacies = new Dictionary<Pharmacy, double>();
+
+            foreach (Pharmacy p in this.pharmacies)
+            {
+                nearestPharmacies.Add(p, Utility.kilometersToMiles(Utility.haversine(latitude, longitude, p.Latitude, p.Longitude)));
+            }
+
+            var tempList = nearestPharmacies.ToList();
+
+            return from KeyValuePair<Pharmacy, double> data in tempList orderby data.Value ascending select data;
+        }
+
+        public KeyValuePair<Pharmacy, double> FetchNearestPharmacy(double latitude, double longitude)
+        {
+            return FetchNearestPharmacies(latitude, longitude).First();
         }
 
         private bool disposed = false;
