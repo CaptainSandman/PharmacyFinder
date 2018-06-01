@@ -48,6 +48,8 @@ There are 4 GET methods at the endpoint:
     "Latitude": 39.03504000,
     "Longitude": -95.75870000
   },
-  "Value": 1.234567 // This is distance in miles.
+  "Value": 1.234567
 }
 ```
+
+Value is the distance in miles. (We wrap the Pharmacy and distance in a `KeyValuePair` object)
