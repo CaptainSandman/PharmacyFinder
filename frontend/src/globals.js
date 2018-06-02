@@ -4,9 +4,9 @@ class Globals
 {
   static getBackendUrl() {
     if (process.env.NODE_ENV === 'production') {
-      return "http://api.pharmacy-finder.machonacho.io/api"
+      return "//joshpharmacyfinderapi-dev.azurewebsites.net/api"
     } else {
-      return "http://localhost:5000/api"
+      return "//localhost:5000/api"
     }
   }
 
