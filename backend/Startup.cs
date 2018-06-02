@@ -39,6 +39,8 @@ namespace PharmacyBackend
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
+
             app.UseCors(
                 options => options.WithOrigins("*").AllowAnyMethod()
             );
