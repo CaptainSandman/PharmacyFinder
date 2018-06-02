@@ -21,7 +21,7 @@ namespace PharmacyBackend.Repositories
             CsvParser<Pharmacy> parser = new CsvParser<Pharmacy>(new CsvParserOptions(true, ','), new PharmacyMapping());
 
             // lmao, this may be cheating... :^)
-            var data = parser.ReadFromFile(@"./Data/pharmacies.csv", Encoding.ASCII);
+            var data = parser.ReadFromFile(@"./wwwroot/pharmacies.csv", Encoding.ASCII);
 
             int idIterator = 0;
             foreach (var pharmaData in data.ToList())
