@@ -1,7 +1,7 @@
 <template>
   <b-list-group-item :active="active">
     <span @click="onClick">
-      {{pharmacy.name}}
+      {{pharmacy.name}}&nbsp;
       <i v-if="!expanded" class="fas fa-chevron-right"></i>
       <i v-else class="fas fa-chevron-down"></i>
     </span>
@@ -12,6 +12,10 @@
         <br/>
         {{pharmacy.address}}<br/>
         {{pharmacy.city}}, {{pharmacy.state}}, {{pharmacy.zip}}
+        <span v-if="pharmacy.distance !== undefined">
+          <br/>
+          {{pharmacy.distance.toFixed(2)}} miles away.
+        </span>
       </small>
     </div>
   </b-list-group-item>

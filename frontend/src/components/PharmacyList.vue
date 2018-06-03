@@ -16,7 +16,7 @@ export default {
     "pharmacy-list-item": PharmacyListItem
   },
   props: [
-    'pharmacyData'
+    'pharmacyData',
   ],
   data() {
     return {
@@ -25,7 +25,8 @@ export default {
   },
   methods: {
     setPharmacyId(id) {
-      this.currentPharmacyId = id
+      this.currentPharmacyId = id;
+      this.$emit('selectedPharmacy', id);
     }
   }
 }
