@@ -6,5 +6,5 @@ I decided to use ASP.NET Core Web API for the backend because it's new to me and
 
 I decided to use Vue.js for the frontend because I'm familiar with it and I like it a lot. :)
 
-Live demo (hosted on Amazon S3 and Azure App Service): http://pharmacy-finder.machonacho.io/
+Live demo (hosted on Amazon S3 and Azure App Service): https://pharmacy-finder.machonacho.io/
 
