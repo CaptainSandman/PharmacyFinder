@@ -1,11 +1,8 @@
-# This only containerizes the backend component, as the fronend is already hosted on Amazon S3
+# This only containerizes the backend component, as the frontend is already hosted on Amazon S3
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build-env
 WORKDIR /backend
 
-# Copy csproj and restore as distinct layers
-# COPY *.csproj ./
-
-# Copy everything else and build
+# Copy everything and build
 COPY ./backend ./
 RUN dotnet restore
 RUN dotnet publish -c Release -o out
