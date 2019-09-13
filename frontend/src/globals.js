@@ -4,7 +4,7 @@ class Globals
 {
   static getBackendUrl() {
     if (process.env.NODE_ENV === 'production') {
-      return "//joshpharmacyfinderapi-dev.azurewebsites.net/api"
+      return "http://josh-pharmacybackend-dev.us-east-1.elasticbeanstalk.com/api"
     } else {
       return "//localhost:5000/api"
     }
