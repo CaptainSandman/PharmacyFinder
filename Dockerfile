@@ -14,4 +14,4 @@ COPY --from=build-env /backend/out .
 ENTRYPOINT ["dotnet", "PharmacyBackend.dll"]
 
 # Expose the server port so Elastic Beanstalk won't complain
-EXPOSE 8080
+EXPOSE 80
